@@ -5,6 +5,7 @@ config.plugins.push(
     [
         "semantic-release-helm",
         {   
+            chartPath: "",
             // Any other configuration should be specified here
             //registry: 'localhost:5000/repo/chart'
         }

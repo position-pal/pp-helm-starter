@@ -34,3 +34,6 @@ yarn-error.log
 package-lock.json
 package.json
 yarn.lock
+
+# Semantic Relase files
+release.config.js

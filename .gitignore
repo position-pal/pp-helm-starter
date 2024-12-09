@@ -52,7 +52,6 @@ kubeconfig
 .npmrc
 
 # Package Managers
-package-lock.json
 yarn.lock
 pnpm-lock.yaml
 

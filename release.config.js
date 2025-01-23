@@ -3,10 +3,11 @@ config.plugins.push(
     "@semantic-release/github",
     "@semantic-release/git",
     [
-        "semantic-release-helm",
+        "@pubgcorp/semantic-release-helm",
         {   
-            // Any other configuration should be specified here
-            //registry: 'localhost:5000/repo/chart'
+            "chartRepository": "https://position-pal.github.io/pp-helm-starter/",
+            "versionUpdatePolicy": "sync",
+            "appVersionUpdatePolicy": "desync"
         }
     ]
 )

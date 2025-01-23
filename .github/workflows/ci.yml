@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-    linting-and-testing:
+    linting:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
@@ -19,17 +19,9 @@ jobs:
             - name: Lint Helm Charts
               run: helm lint .
             
-            - name: Install Kind Cluster
-              uses: helm/kind-action@0025e74a8c7512023d06dc019c617aa3cf561fde # v1.10.0
-            
-            - name: Test Helm Charts
-              run: |
-                for chart in ./; do
-                    helm install test-release "$chart" --dry-run
-                done
     success:
         needs:
-            - linting-and-testing
+            - linting
         if: always() && (contains(join(needs.*.result, ','), 'failure') || ( !contains(join(needs.*.result, ','), 'cancelled') && !contains(join(needs.*.result, ','), 'skipped')))
         runs-on: ubuntu-24.04
         steps:

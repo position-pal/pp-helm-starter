@@ -5,7 +5,7 @@ config.plugins.push(
     [
         "@pubgcorp/semantic-release-helm",
         {   
-            "chartRepository": "https://position-pal.github.io/pp-helm-starter/",
+            "ociRegistry": "oci://ghcr.io/position-pal",
             "versionUpdatePolicy": "sync",
             "appVersionUpdatePolicy": "desync"
         }

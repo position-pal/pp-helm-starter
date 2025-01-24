@@ -25,8 +25,8 @@ jobs:
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          HELM_REPOSITORY_USERNAME: ${{ secrets.USERNAME }}
-          HELM_REPOSITORY_PASSWORD: ${{ secrets.TOKEN }}
+          HELM_REGISTRY_USERNAME: ${{ secrets.USERNAME }}
+          HELM_REGISTRY_PASSWORD: ${{ secrets.TOKEN }}
         run: |
           npm install
           npx semantic-release

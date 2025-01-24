@@ -6,9 +6,8 @@ config.plugins.push(
             "chartPath": "."
         }
     ],
-    "@semantic-release/github",
     "@semantic-release/git",
-    
+    "@semantic-release/github",
 )
 
 module.exports = config

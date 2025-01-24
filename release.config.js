@@ -5,7 +5,7 @@ config.plugins.push(
     [
         "@pubgcorp/semantic-release-helm",
         {   
-            "ociRegistry": "oci://ghcr.io/position-pal",
+            "ociRegistry": "ghcr.io/position-pal",
             "versionUpdatePolicy": "sync",
             "appVersionUpdatePolicy": "desync"
         }

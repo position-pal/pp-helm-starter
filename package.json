@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/position-pal/pp-helm-starter#readme",
   "devDependencies": {
-    "semantic-release-helm3": "^2.9.3",
     "semantic-release-preconfigured-conventional-commits": "1.1.116"
   },
   "engines": {

@@ -34,6 +34,7 @@ jobs:
           npx semantic-release
       
       - name: Push Helm chart to OCI compatible registry (Github)
+        if: ${{ github.ref_type == 'tag' }}
         uses: bsord/helm-push@v4.1.0
         with:
           useOCIRegistry: true
